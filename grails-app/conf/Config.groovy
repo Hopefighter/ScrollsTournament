@@ -115,3 +115,25 @@ log4j.main = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.scrollstourney.User'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.scrollstourney.UserRole'
+grails.plugin.springsecurity.authority.className = 'com.scrollstourney.Role'
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+        '/Competitor/**':                 ['ROLE_ADMIN'],
+        '/Bracket/**':                    ['ROLE_ADMIN'],
+        '/Match/**':                      ['ROLE_ADMIN'],
+        '/User/**':                       ['ROLE_ADMIN'],
+        '/Tournament/**':                 ['ROLE_ADMIN'],
+	'/':                              ['permitAll'],
+	'/index':                         ['permitAll'],
+	'/index.gsp':                     ['permitAll'],
+	'/assets/**':                     ['permitAll'],
+	'/**/js/**':                      ['permitAll'],
+	'/**/css/**':                     ['permitAll'],
+	'/**/images/**':                  ['permitAll'],
+	'/**/favicon.ico':                ['permitAll']
+]
+
