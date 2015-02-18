@@ -8,13 +8,11 @@ class Tournament {
     Date dateHeld
     Date signupperiod
     Date checkin
+    Date dateCreated
     User host
     int maxCompetitors
     int minCompetitors
     int competitionType
-    byte[] banner
-    
-    
     
     static hasMany = [competitors:Competitor,logs:Log,brackets:Bracket,moderators:User]
 
@@ -22,7 +20,6 @@ class Tournament {
         competitors nullable:true
         logs nullable:true
         brackets nullable:true
-        banner nullable:true
         moderators nullable:true
     }
 }

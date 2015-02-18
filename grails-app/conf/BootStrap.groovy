@@ -18,57 +18,49 @@ class BootStrap {
         def hope = new User(
             username: "Hopefighter",
             password: "test",
-            accountExpired: false,
-            accountLocked: false,
-            passwordExpired: false,
             profile: new Profile(
                 igname: "Hopefighter",
                 email: "hopefighterjojo@gmail.com",
                 country: "DE",
                 info: "„Lorem ipsum dolor sit amet, consectetur, adipisci velit, ...",
                 birthday: new Date(1997,1,9),
-                sendNews: true)).save(failOnError: true)
+                sendNews: true,
+                mailConfirmed: true)).save(failOnError: true)
         def adminRole = new Role(authority: "ROLE_ADMIN").save(failOnError: true)
         UserRole.create(hope,adminRole)
         def agne = new User(
             username: "agne",
             password: "test1",
-            accountExpired: false,
-            accountLocked: false,
-            passwordExpired: false,
             profile: new Profile(
                 igname: "Orangee",
                 email: "orangee@scrolldier.com",
                 country: "NO",
                 info: "„Admin on Scrolldier",
                 birthday: new Date(1993,6,14),
-                sendNews: true)).save(failOnError: true)
+                sendNews: true,
+                mailConfirmed: true)).save(failOnError: true)
         def zylus = new User(
             username: "zylus",
             password: "test2",
-            accountExpired: false,
-            accountLocked: false,
-            passwordExpired: false,
             profile: new Profile(
                 igname: "Zylus",
                 email: "zy@lus.com",
                 country: "DE",
                 info: "„Scrolls Moderator",
                 birthday: null,
-                sendNews: true)).save(failOnError: true)
+                sendNews: true,
+                mailConfirmed: true)).save(failOnError: true)
         def gareth = new User(
             username: "gareth",
             password: "test3",
-            accountExpired: false,
-            accountLocked: false,
-            passwordExpired: false,
             profile: new Profile(
                 igname: "SeeMeScrollin",
                 email: "gareth@mojang.com",
                 country: "NO",
                 info: "„Scrolls Community Manager",
                 birthday: new Date(1993,6,14),
-                sendNews: true)).save(failOnError: true)
+                sendNews: true,
+                mailConfirmed: true)).save(failOnError: true)
         
         println("creating Tournament...")
         def testtourney = new Tournament(

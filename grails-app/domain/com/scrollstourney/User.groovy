@@ -7,9 +7,9 @@ class User {
 	String username
 	String password
 	boolean enabled = true
-	boolean accountExpired
-	boolean accountLocked
-	boolean passwordExpired
+	boolean accountExpired = false
+	boolean accountLocked = false
+	boolean passwordExpired = false
         Profile profile
 
 	static transients = ['springSecurityService']
@@ -17,6 +17,7 @@ class User {
 	static constraints = {
 		username blank: false, unique: true
 		password blank: false
+                profile nullable: true
 	}
 
 	static mapping = {
@@ -42,5 +43,5 @@ class User {
 	}
         
         String toString() {return "User $username (id: $id)"}
-        String getDisplayString() { return username }
+        String getDisplayString() { return (profile.igname ?: username) }
 }

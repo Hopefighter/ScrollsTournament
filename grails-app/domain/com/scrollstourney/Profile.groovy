@@ -8,16 +8,22 @@ class Profile {
     String info
     Date birthday
     Date dateCreated
-    boolean sendNews
+    boolean sendNews = false
+    boolean mailConfirmed = false
+    int gender
     
     
     static belongsTo = [user:User]
 
     static constraints = {
         igname nullable:true
-        email blank:false
+        email email: true, nullable:false, blank:false
         country nullable:true
         info nullable: true
         birthday nullable:true
+    }
+    
+    String toString() {
+        return igname ?: user.username
     }
 }

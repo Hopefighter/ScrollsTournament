@@ -21,6 +21,7 @@
                     <a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a>
                     <sec:ifLoggedIn>
                         Logged in as: <sec:username/>
+                        <g:link controller='logout' action='index'>Logout</g:link>
                     </sec:ifLoggedIn>
                     <sec:ifNotLoggedIn>
                         <g:link controller='login' action='auth'>Login</g:link>
