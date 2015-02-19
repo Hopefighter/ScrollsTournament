@@ -1,5 +1,7 @@
 <div>
-    <h3>${tourney.tourneyname}</h3>
+    <g:link controller="tournament" action="info" id="${tourney.id}">
+        <h3>${tourney.tourneyname}</h3>
+    </g:link>
     <div>
         Host: 
         <g:link controller="profile" action="profile" id="${tourney.host.profile.id}">

@@ -24,6 +24,6 @@ class Profile {
     }
     
     String toString() {
-        return igname ?: user.username
+        return (igname?:user.username)
     }
 }

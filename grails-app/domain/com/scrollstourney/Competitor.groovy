@@ -20,4 +20,8 @@ class Competitor {
             }
         }
     }
+    
+    String toString() {
+        return name
+    }
 }

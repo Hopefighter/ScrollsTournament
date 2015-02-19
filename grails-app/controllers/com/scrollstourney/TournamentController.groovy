@@ -20,3 +20,8 @@ class TournamentController {
         }
     }
 }
+
+//class TournamentCreationCommand {
+//    String tourneyname
+//    String description
+//}

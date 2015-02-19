@@ -14,6 +14,10 @@
     </head>
     <body>
         <h1>${tourney.tourneyname}</h1>
+        <p>${tourney.description}</p>
         <!-- ToDo: Display all the info of the Tournament, and more info -->
+        <div>
+            Add a way to display the brackets
+        </div>
     </body>
 </html>

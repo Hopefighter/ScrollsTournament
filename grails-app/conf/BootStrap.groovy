@@ -101,18 +101,24 @@ class BootStrap {
             sideOne: hopecomp,
             sideTwo: agnecomp,
             rounds: 3,
+            tourneyround = 1,
+            roundpos = 1,
             tourney: testtourney).save(failOnError: true)
         def bracketb = new Bracket(
             sideOne: zyluscomp,
             sideTwo: garethcomp,
             rounds: 3,
+            tourneyround = 1,
+            roundpos = 2,
             tourney: testtourney).save(failOnError: true)
         def bracketc = new Bracket(
             rounds: 5,
+            tourneyround = 2,
+            roundpos = 1,
             tourney: testtourney).save(failOnError: true)
         
-        bracketc.addToChildbrackets(bracketa)
-        bracketc.addToChildbrackets(bracketb)
+        bracketc.addToChildbracketswin(bracketa)
+        bracketc.addToChildbracketswin(bracketb)
         bracketc.save()
         
         println("adding Matches...")

@@ -17,6 +17,7 @@ class Tournament {
     static hasMany = [competitors:Competitor,logs:Log,brackets:Bracket,moderators:User]
 
     static constraints = {
+        description type: 'text', nullable: true
         competitors nullable:true
         logs nullable:true
         brackets nullable:true

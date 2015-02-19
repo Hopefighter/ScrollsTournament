@@ -4,9 +4,8 @@ class Match {
 
     Competitor_User usideOne
     Competitor_User usideTwo
-    boolean played = false
-    int winnerSideOne = 0
-    int winnerSideTwo = 0
+    int winnerSideOne = 0 //winner according to sideOne
+    int winnerSideTwo = 0 //winner according to sideTwo
     int winner
     
     static belongsTo = [bracket:Bracket]
