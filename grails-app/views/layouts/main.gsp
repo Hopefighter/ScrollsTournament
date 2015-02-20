@@ -27,6 +27,12 @@
                         <g:link controller='login' action='auth'>Login</g:link>
                     </sec:ifNotLoggedIn>
                 </div>
+                <div style="margin-bottom:30px;">
+                    <nav:primary/>
+                </div>
+                <div>
+                    <nav:menu scope="user"/>
+                </div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
